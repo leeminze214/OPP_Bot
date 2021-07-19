@@ -8,4 +8,11 @@ bot = bot = commands.Bot(command_prefix='.', help_command =None, case_insensitiv
 async def on_ready():
     print('opp bot is on!')
 
-print(token)
+@bot.command
+async def reactionRoleMessage(ctx):
+    channel = bot.get_channel(866761663020662784) 
+    msg = "hi there!"
+    await ctx.channel.send(msg)
+
+
+bot.run(token, bot = True)
